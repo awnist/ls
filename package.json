@@ -1,5 +1,5 @@
 { "name" : "ls"
-, "description" : "Coffeescript and Javascript module for cleanly traversing directories and listing files."
+, "description" : "Cleanly traverse directories in Coffeescript & Javascript"
 , "author" : "Awnist <hi@awnist.com> (http://awnist.com)"
 , "version" : "0.0.1"
 , "main" : "./lib/ls"

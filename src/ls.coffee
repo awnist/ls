@@ -50,8 +50,8 @@ module.exports = list = ->
 			# Bail out if this file doesn't match the regex...
 			if config.match and not file.match config.match then return
 
-			# ...or if this isn't a file.
-			if not fs.statSync(self.full).isFile() then return
+			return if config.type is "file" and not fs.statSync(self.full).isFile() or
+					config.type is "dir" and not fs.statSync(self.full).isDir()
 
 			# Push into results array and run iterator over item
 			results.push self

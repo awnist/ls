@@ -38,16 +38,17 @@ You can either grab the whole list
 
     all_files = ls "/path"
     for file in all_files
-        ...
+        console.log file.name, "is", file.stat.size
 
 Or use an iterator function, with the context being the file's object
 
     ls "/path", ->
         console.log @name, "is", @stat.size
 
-The {config} parameter accepts the following:
+The {config} object accepts the following parameters:
 
 * recurse: Should we recurse into directories? (Boolean, default is false)
+* type: What kind of files should we return? ("all", "dir", "file", default is "all")
 
 The /regex/ will only return matching files. All directories will still be recursed.
 
