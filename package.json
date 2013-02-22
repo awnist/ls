@@ -1,7 +1,7 @@
 { "name" : "ls"
 , "description" : "Cleanly traverse directories in Coffeescript & Javascript"
 , "author" : "Awnist <hi@awnist.com> (http://awnist.com)"
-, "version" : "0.0.1"
+, "version" : "0.0.2"
 , "main" : "./lib/ls"
 , "repository" :
   { "type" : "git"
