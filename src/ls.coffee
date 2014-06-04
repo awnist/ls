@@ -1,4 +1,6 @@
 fs = require 'fs'
+glob = require 'glob'
+path = require 'path'
 
 ###*
  * @param {Array} paths Path or array of paths to iterate over
@@ -30,16 +32,16 @@ module.exports = list = ->
 
 	results = []
 
-	while path = paths.shift()
+	while trypath = paths.shift()
 
-		fs.readdirSync(path).sort().forEach (file) ->
+		glob.sync(trypath, {nonegate: true}).forEach (file) ->
 
 			# Object with this file's properties
 			self =
-				path: path
-				full: "#{path}/#{file}"
-				file: file
-				name: file.match(/^(.+?)(\.\w{2,7})?$/)?[1]
+				path: path.dirname(file)
+				full: file
+				file: path.basename(file)
+				name: path.basename(file, path.extname(file))
 
 			# stat is loaded only when accessed
 			Object.defineProperty self, "stat", get: -> fs.statSync(self.full)

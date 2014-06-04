@@ -1,8 +1,8 @@
 ## What's "ls"?
 
-ls is a Coffeescript and Javascript module for cleanly traversing directories and listing files.
+ls is a node module for cleanly traversing directories and listing files.
 
-It has flexible and variable length arguments.
+The primary goal is a flexible, expressive syntax.
 
 ## Overview
 
@@ -17,7 +17,7 @@ Then we can be as sparse as
 
 Or as elaborate as 
 
-    ls ["/path", "/another/path/"], { recurse: true }, /jpg/, ->
+    ls ["/path/foo*", "/another/path/"], { recurse: true }, /jpg/, ->
         console.log @name, "is in", @path, "and is", @stat.size
 
 ## Usage

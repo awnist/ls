@@ -1,15 +1,18 @@
-{ "name" : "ls"
-, "description" : "Cleanly traverse directories in Coffeescript & Javascript"
-, "author" : "Awnist <hi@awnist.com> (http://awnist.com)"
-, "version" : "0.0.2"
-, "main" : "./lib/ls"
-, "repository" :
-  { "type" : "git"
-  , "url" : "http://github.com/awnist/ls.git"
-  }
-, "license" :
-  { "type" : "Public Domain"
-  , "url" : "http://unlicense.org/"
-
+{
+  "name": "ls",
+  "description": "Cleanly traverse directories in node",
+  "author": "Awnist <hi@awnist.com> (http://awnist.com)",
+  "version": "0.1.0",
+  "main": "./lib/ls",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/awnist/ls.git"
+  },
+  "license": {
+    "type": "Public Domain",
+    "url": "http://unlicense.org/"
+  },
+  "dependencies": {
+    "glob": "~4.0.2"
   }
 }
