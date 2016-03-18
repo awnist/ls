@@ -53,7 +53,7 @@ module.exports = list = ->
 			if config.match and not file.match config.match then return
 
 			return if config.type is "file" and not fs.statSync(self.full).isFile() or
-					config.type is "dir" and not fs.statSync(self.full).isDir()
+					config.type is "dir" and not fs.statSync(self.full).isDirectory()
 
 			# Push into results array and run iterator over item
 			results.push self
