@@ -2,7 +2,7 @@
   "name": "ls",
   "description": "Cleanly traverse directories in node",
   "author": "Awnist <hi@awnist.com> (http://awnist.com)",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./lib/ls",
   "repository": {
     "type": "git",
@@ -13,6 +13,6 @@
     "url": "http://unlicense.org/"
   },
   "dependencies": {
-    "glob": "~4.0.2"
+    "glob": "7.0.5"
   }
 }
