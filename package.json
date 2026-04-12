@@ -2,17 +2,26 @@
   "name": "ls",
   "description": "Cleanly traverse directories in node",
   "author": "Awnist <hi@awnist.com> (http://awnist.com)",
-  "version": "0.2.1",
-  "main": "./lib/ls",
+  "version": "1.0.0",
+  "main": "./src/ls.js",
+  "exports": {
+    ".": {
+      "import": "./src/ls.mjs",
+      "require": "./src/ls.js"
+    }
+  },
+  "scripts": {
+    "test": "node --test 'test/*.test.js' 'test/*.test.mjs'"
+  },
+  "engines": {
+    "node": ">=18"
+  },
   "repository": {
     "type": "git",
     "url": "http://github.com/awnist/ls.git"
   },
-  "license": {
-    "type": "Public Domain",
-    "url": "http://unlicense.org/"
-  },
+  "license": "Unlicense",
   "dependencies": {
-    "glob": "7.0.5"
+    "glob": "^13.0.6"
   }
 }
